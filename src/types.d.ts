@@ -1,5 +1,3 @@
-export type Weather = "sunny" | "windy" | "cloudy" | "stormy" | "rainy";
-export type Visibility = "great" | "good" | "OK" | "poor";
 
 export interface DiaryEntry {
   id: number;
@@ -14,3 +12,5 @@ export type NonSensitiveInfoDiaryEntry = Pick<
   "id" | "date" | "weather" | "visibility"
 >; */
 export type NonSensitiveInfoDiaryEntry = Omit<DiaryEntry, "comment">;
+
+export type newDiaryEntry = Omit<DiaryEntry, "id">;
